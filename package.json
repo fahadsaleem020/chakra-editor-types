@@ -17,7 +17,8 @@
     "semantic-release": "semantic-release"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public", 
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "@chakra-ui/react": "2.x",
