@@ -1,5 +1,5 @@
 {
-  "name": "@retap/utils",
+  "name": "@retap/types",
   "version": "0.0.0-development",
   "type": "module",
   "license": "MIT",
@@ -17,12 +17,11 @@
     "semantic-release": "semantic-release"
   },
   "publishConfig": {
-    "access": "public", 
-    "registry": "https://registry.npmjs.org/"
+    "access": "public"
   },
   "peerDependencies": {
     "@chakra-ui/react": "2.x",
-    "@tiptap/react": "2.x",
+    "@tiptap/react": "2.0.0-beta.209",
     "react": "18.x"
   },
   "devDependencies": {
