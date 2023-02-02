@@ -4,7 +4,7 @@ import { defineConfig } from "rollup";
 export default defineConfig({
   input: "index.ts",
   output: {
-    file: "lib/index.esm.js",
+    file: "index.esm.js",
     format: "esm",
   },
 

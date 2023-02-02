@@ -9,7 +9,7 @@
     "retap/types"
   ],
   "files": [
-    "/lib/index.d.ts",
+    "/index.d.ts",
     "/README.md"
   ],
   "scripts": {
