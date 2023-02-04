@@ -275,24 +275,24 @@ export declare type LinkInputs<T = {}> = {
   url: string;
 } & T;
 
-type ReactState<T> = React.Dispatch<React.SetStateAction<T>>;
+type ReactDispatch<T> = React.Dispatch<React.SetStateAction<T>>;
 
 export declare interface BaseMeta<NodeAttributes> {
   alignment: "left" | "center" | "right";
-  setAlignment: ReactState<"left" | "center" | "right">;
+  setAlignment: ReactDispatch<"left" | "center" | "right">;
   width: string | number;
-  setWidth: ReactState<string | number>;
+  setWidth: ReactDispatch<string | number>;
   height: string | number;
-  setHeight: ReactState<string | number>;
+  setHeight: ReactDispatch<string | number>;
   modalProps: UseDisclosureProps;
   attributes: Record<string, any> | undefined;
-  setNodeAttributes: ReactState<Record<string, any> | undefined>;
+  setNodeAttributes: ReactDispatch<Record<string, any> | undefined>;
   getNodeAttributes: NodeAttributes | undefined;
-  swallowNodeAttributes: ReactState<NodeAttributes | undefined>;
+  swallowNodeAttributes: ReactDispatch<NodeAttributes | undefined>;
   menuProps:
     | (Omit<RetapToolbarProps, "editor"> & { styles?: FlexProps })
     | undefined;
-  setMenuProps: ReactState<
+  setMenuProps: ReactDispatch<
     (Omit<RetapToolbarProps, "editor"> & { styles?: FlexProps }) | undefined
   >;
 }

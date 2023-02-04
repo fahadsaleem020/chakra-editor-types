@@ -6,7 +6,7 @@
   "author": "fahadsaleem",
   "description": "Type util for retap editor.",
   "keywords": [
-    "retap/types"
+    "@retap/types"
   ],
   "files": [
     "/index.d.ts",
@@ -20,9 +20,9 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@chakra-ui/react": "2.x",
-    "@tiptap/react": "2.0.0-beta.209",
-    "react": "18.x"
+    "@chakra-ui/react": "^2.4.9",
+    "@tiptap/react": "^2.0.0-beta.209",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@chakra-ui/react": "^2.4.9",
