@@ -98,8 +98,7 @@ export declare type RetapToolbarProps<T = {}> = {
   buttons?: Buttons;
   buttonProps?: ButtonNodes;
   fallback?: ReactElement;
-} & WithEditor &
-  T;
+} & T;
 
 export declare type RetapToolbarButtonProps<T = {}> = ButtonNodes &
   WithEditor &
@@ -294,7 +293,6 @@ export declare type RetapEditorProps<T = {}> = {
   fallback?: ReactElement;
   buttons?: Buttons;
   buttonProps?: ButtonNodes;
-  bubbleMenuProps?: RetapBubbleMenuProps;
 } & WithEditor<true> &
   T;
 
@@ -441,40 +439,6 @@ export interface IconBaseProps extends React.SVGAttributes<SVGElement> {
   color?: string;
   title?: string;
 }
-
-export declare type RetapBubbleMenuProps<T = {}> = Partial<
-  Record<NodeOrMarkListExtracted, BubbleMenuNodeProps> & {
-    defaultToolbar: Omit<BubbleMenuNodeProps, "disableParagraph"> & {
-      disableOnNodeOrMark?: NodeOrMarkListExtracted[];
-    };
-  } & {
-    tippyOptions?: BubbleMenuProps["tippyOptions"];
-    updateDelay?: number;
-    visibleIfEmpty?: boolean;
-  }
-> &
-  T;
-
-const data = {};
-
-export declare type BubbleMenuNodeProps = {
-  buttons?: Buttons;
-  toolbarStyles?: FlexProps;
-  alwaysVisible?: boolean;
-  disableParagraph?: boolean;
-  buttonProps?: ButtonNodes;
-};
-
-export declare interface ShouldShowHandlerProps extends WithEditor {
-  state: Editor["state"];
-  setBubbleMenuData: React.Dispatch<
-    React.SetStateAction<BubbleMenuNodeProps | undefined>
-  >;
-}
-
-export declare type ShouldShowHandler = (
-  props: ShouldShowHandlerProps & RetapBubbleMenuProps
-) => boolean;
 
 export declare interface ItemProps {
   selectedItem: string;
