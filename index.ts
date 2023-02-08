@@ -6,7 +6,7 @@ import {
   ButtonProps,
   SelectProps,
 } from "@chakra-ui/react";
-import { Extensions, Editor, BubbleMenuProps } from "@tiptap/react";
+import { Extensions, Editor } from "@tiptap/react";
 import {
   ReactElement,
   FC,
