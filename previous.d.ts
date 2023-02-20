@@ -94,13 +94,15 @@ export declare type VideoModalInputs<T = {}> = {
   title: string;
 } & T;
 
-export declare type ToolbarProps<T = {}> = {
+export declare type RetapToolbarProps<T = {}> = {
   buttons?: Buttons;
   buttonProps?: ButtonNodes;
   fallback?: ReactElement;
 } & T;
 
-export declare type ToolbarButtonProps<T = {}> = ButtonNodes & WithEditor & T;
+export declare type RetapToolbarButtonProps<T = {}> = ButtonNodes &
+  WithEditor &
+  T;
 export declare interface BaseProps extends WithEditor {
   withHeader: boolean;
   rowIndex: number;
@@ -212,9 +214,9 @@ export declare type StorageMeta = Record<StorageKeys, any>;
 export declare type UseStorage = (
   editor: WithEditor<true>["editor"]
 ) => StorageMeta | undefined;
-export declare interface ProviderContext {
-  Drawer: DisclosureMeta;
-  Modal: DisclosureMeta;
+export declare interface IRetapContext {
+  retapDrawer: RetapDisclosureMeta;
+  retapModal: RetapDisclosureMeta;
   youtube: NodeMeta<YoutubeNodeAttibutes>;
   image: NodeMeta<ImageNodeAttibutes>;
   video: NodeMeta<VideoNodeAttibutes>;
@@ -234,10 +236,10 @@ export declare interface NodeMeta<NodeAttributes> {
   getNodeAttributes: NodeAttributes | undefined;
   swallowNodeAttributes: ReactDispatch<NodeAttributes | undefined>;
   menuProps:
-    | (Omit<ToolbarProps, "editor"> & { styles?: FlexProps })
+    | (Omit<RetapToolbarProps, "editor"> & { styles?: FlexProps })
     | undefined;
   setMenuProps: ReactDispatch<
-    (Omit<ToolbarProps, "editor"> & { styles?: FlexProps }) | undefined
+    (Omit<RetapToolbarProps, "editor"> & { styles?: FlexProps }) | undefined
   >;
 }
 
@@ -272,7 +274,7 @@ export declare type ImageModalInputs<T = {}> = {
   alt: string;
 } & T;
 
-export declare type DisclosureProps = PropsWithChildren &
+export declare type RetapDisclosureProps = PropsWithChildren &
   Omit<ModalProps, "isOpen" | "onClose" | "children" | "id"> & { id: string };
 
 export declare type UseDisclosePropsExtended = Required<
@@ -285,7 +287,7 @@ export declare type WithEditor<isNull = false> = isNull extends true
   ? { editor: Editor | null }
   : { editor: Editor };
 
-export declare type EditorProps<T = {}> = {
+export declare type RetapEditorProps<T = {}> = {
   toolbarProps?: FlexProps;
   editorProps?: BoxProps;
   fallback?: ReactElement;
@@ -294,11 +296,11 @@ export declare type EditorProps<T = {}> = {
 } & WithEditor<true> &
   T;
 
-export declare type DisclosureMeta = {
+export declare type RetapDisclosureMeta = {
   disclosureProps?: UseDisclosePropsExtended;
 };
 
-export declare type UseDisClosure = () => DisclosureMeta;
+export declare type UseRetapDisClosure = () => RetapDisclosureMeta;
 
 export declare type NodeOrMarkList =
   | "paragraph"

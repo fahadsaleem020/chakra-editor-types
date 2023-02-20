@@ -1,12 +1,12 @@
 {
-  "name": "@retap/types",
+  "name": "@chakra/types",
   "version": "0.0.0-development",
   "type": "module",
   "license": "MIT",
   "author": "fahadsaleem",
-  "description": "Types util for retap editor.",
+  "description": "Types util for chakra editor.",
   "keywords": [
-    "@retap/types"
+    "@chakra/types"
   ],
   "files": [
     "index.d.ts",
@@ -39,7 +39,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fahadsaleem020/retap-types.git"
+    "url": "https://github.com/fahadsaleem020/chakra-editor-types.git"
   },
   "release": {
     "branches": [
