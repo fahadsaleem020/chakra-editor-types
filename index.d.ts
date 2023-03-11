@@ -213,8 +213,8 @@ export declare type UseStorage = (
   editor: WithEditor<true>["editor"]
 ) => StorageMeta | undefined;
 export declare interface ProviderContext {
-  Drawer: DisclosureMeta;
-  Modal: DisclosureMeta;
+  drawer: DisclosureMeta;
+  modal: DisclosureMeta;
   youtube: NodeMeta<YoutubeNodeAttibutes>;
   image: NodeMeta<ImageNodeAttibutes>;
   video: NodeMeta<VideoNodeAttibutes>;

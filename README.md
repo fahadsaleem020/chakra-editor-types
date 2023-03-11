@@ -1,1 +1,1 @@
-# Types for retap
+# Types for chakra editor
