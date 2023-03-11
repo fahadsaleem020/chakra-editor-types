@@ -54,11 +54,7 @@ export declare interface WatchProps<T extends ChildrenProps = ChildrenProps> {
   extensions: Extensions;
   delay?: number;
 }
-
-export declare interface LookupProps {
-  content: Content;
-  children: WatchProps["children"];
-}
+clea
 export declare interface VideoOptions {
   HTMLAttributes: {
     className?: string;
