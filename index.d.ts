@@ -7,6 +7,7 @@ import {
   SelectProps,
 } from "@chakra-ui/react";
 import { Extensions, Editor } from "@tiptap/react";
+
 import {
   ReactElement,
   FC,
@@ -42,19 +43,16 @@ export declare interface Content {
   }[];
   text?: string;
 }
-
 export declare interface ChildrenProps {
   type: Content["type"];
   attrs: Content["attrs"];
   content: Content;
 }
-
 export declare interface WatchProps<T extends ChildrenProps = ChildrenProps> {
   children: (values: T) => React.ReactNode;
   extensions: Extensions;
   delay?: number;
 }
-clea
 export declare interface VideoOptions {
   HTMLAttributes: {
     className?: string;
