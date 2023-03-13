@@ -19,6 +19,7 @@
     "access": "public"
   },
   "types": "index.d.ts",
+  "module": "index.d.ts",
   "peerDependencies": {
     "@chakra-ui/react": "^2.4.9",
     "@tiptap/react": "^2.0.0-beta.217",
